@@ -1,0 +1,13 @@
+{
+  "name": "lexiguard-workspace",
+  "version": "1.0.0",
+  "description": "Root workspace workspace for AI-Powered Legal Document Analyzer",
+  "scripts": {
+    "install:backend": "npm install --prefix backend",
+    "install:frontend": "npm install --prefix frontend --ignore-scripts",
+    "install:all": "npm run install:backend && npm run install:frontend",
+    "start:backend": "npm start --prefix backend",
+    "start:frontend": "node frontend/node_modules/vite/bin/vite.js --prefix frontend",
+    "dev:backend": "npm run dev --prefix backend"
+  }
+}

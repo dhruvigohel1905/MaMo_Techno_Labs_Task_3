@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+/* Glassmorphism panel presets */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.dark .glass-panel {
+  background: rgba(11, 15, 25, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* High-tech Neon Card presets */
+.neon-card {
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .neon-card {
+  background: #0B0F19;
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dark .neon-card:hover {
+  border-color: rgba(99, 102, 241, 0.35);
+  box-shadow: 0 0 25px rgba(99, 102, 241, 0.12);
+}
+
+/* Radial Glows */
+.ambient-glow {
+  background: radial-gradient(circle at 50% -20%, rgba(99, 102, 241, 0.15), transparent 60%);
+}
+
+.dark .ambient-glow {
+  background: radial-gradient(circle at 50% -20%, rgba(99, 102, 241, 0.08), transparent 70%),
+              radial-gradient(circle at 0% 100%, rgba(6, 182, 212, 0.03), transparent 50%);
+}
+
+/* Document Highlighting Presets */
+.highlight-low {
+  background-color: rgba(16, 185, 129, 0.08);
+  border-bottom: 2px solid rgba(16, 185, 129, 0.4);
+  padding: 1px 0;
+  transition: all 0.2s;
+}
+
+.highlight-medium {
+  background-color: rgba(245, 158, 11, 0.08);
+  border-bottom: 2px solid rgba(245, 158, 11, 0.4);
+  padding: 1px 0;
+  transition: all 0.2s;
+}
+
+.highlight-high {
+  background-color: rgba(239, 68, 68, 0.08);
+  border-bottom: 2px solid rgba(239, 68, 68, 0.4);
+  padding: 1px 0;
+  transition: all 0.2s;
+}
+
+.highlight-active {
+  background-color: rgba(99, 102, 241, 0.15) !important;
+  border-bottom: 2px solid rgba(99, 102, 241, 1) !important;
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.25);
+  font-weight: 500;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #1F2937;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #374151;
+}
+
+/* Pulse Glow Keyframe */
+@keyframes softPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(0.98);
+  }
+}
+
+.animate-soft-pulse {
+  animation: softPulse 2s infinite ease-in-out;
+}
+
+/* Sci-fi HUD Orbital pulse */
+@keyframes orbitalPulse {
+  0%, 100% { transform: scale(0.9); opacity: 0.15; }
+  50% { transform: scale(1.05); opacity: 0.45; }
+}
+
+.animate-orbital-pulse {
+  animation: orbitalPulse 3.5s infinite ease-in-out;
+}
+
+/* Monospaced HUD Console log box styling */
+.console-log-box {
+  background-color: #02040a;
+  border: 1.5px solid rgba(99, 102, 241, 0.15);
+  font-family: 'Fira Code', monospace;
+  box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.95);
+}
+
+/* Cyberpunk Obsidian Grid Background */
+.grid-bg {
+  background-color: #030712;
+  background-image: 
+    linear-gradient(rgba(99, 102, 241, 0.04) 1.5px, transparent 1.5px),
+    linear-gradient(90deg, rgba(99, 102, 241, 0.04) 1.5px, transparent 1.5px);
+  background-size: 50px 50px;
+  background-position: center;
+}
+
+/* Landing Page interactive hover highlight */
+.landing-highlight {
+  cursor: pointer;
+  padding: 1.5px 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease-in-out;
+}
+
+.landing-highlight:hover {
+  filter: brightness(1.2);
+  box-shadow: 0 0 12px currentColor;
+}
+
+
